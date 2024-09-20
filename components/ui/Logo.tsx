@@ -1,9 +1,8 @@
-import Image from "next/image"
+"use client";
+import Image from "next/image";
 
-const Logo = () =>{
-    return (
-        <Image src="/logo.svg" alt="Logo" width={200} height={200} />
-    )
-}
+const LogoComponent = () => {
+  return <Image src="/images/logo.svg" alt="Logo" width={120} height={120} />;
+};
 
-export default Logo;
+export default LogoComponent;
