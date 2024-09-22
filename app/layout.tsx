@@ -6,8 +6,9 @@ import {
   SignInButton,
   SignedIn,
   SignedOut,
-  UserButton
-} from '@clerk/nextjs'
+  UserButton,
+} from "@clerk/nextjs";
+import { ToastProvider } from "@/components/Providers/toaster-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,12 +26,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
+          <ToastProvider />
           {children}
         </body>
       </html>
